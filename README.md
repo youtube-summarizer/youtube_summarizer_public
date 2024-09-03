@@ -139,8 +139,6 @@ Ensure you have the following installed:
 ### Links:
 [Youtube Presentation](https://www.youtube.com/watch?v=F0XFRyNxHZk)
 
-[Trello Board](https://trello.com/b/dBvBKYNN/proiect-mds)
-
 
 ### Contributing
 
@@ -161,3 +159,7 @@ Project Link: [https://github.com/youtube-summarizer/youtube-summarizer](https:/
 ---
 
 This README provides a detailed guide for setting up and using the YouTubeSummarizer project. For any issues or questions, feel free to reach out through the contact information. Happy summarizing!
+
+## Disclaimer
+
+The keys and secrets that were initially used for AWS, the OpenAI API and the Youtube API have been removed from the repo.
