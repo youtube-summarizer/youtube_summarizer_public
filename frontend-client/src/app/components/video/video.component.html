@@ -1,0 +1,30 @@
+<div class="card" [class.ratedbg]="rated">
+  <div class="card-body">
+    <h5 class="card-title">{{ video.title }}</h5>
+    <p class="card-text">{{ video.uploadedDate | date : "dd/MM/yyyy" }}</p>
+  </div>
+  <a [href]="getYouTubeUrl(video.youtubeVideoId)" target="_blank" class="thumbnail">
+    <img [src]="getThumbnailUrl(video.youtubeVideoId)" alt="Thumbnail" class="card-img-top" />
+  </a>
+  <div class="card-footer">
+    <button class="btn btn-success btn-block" style="width: 100%" (click)="toggleSummary()">
+      {{ showingSummary ? "Hide Summary" : "Show Summary" }}
+    </button>
+    <div *ngIf="showingSummary">
+      <p style="margin-top: 20px; text-align: center" class="summary-text">
+        {{ video.summary ?? "No summary available" }}
+      </p>
+      <div *ngIf="video.summary" class="form-group">
+        <label style="padding-right: 5px" for="rating">Rate this summary:</label>
+        <div style="display: inline-block" class="rating-stars">
+          <span class="fa fa-star" [class.yellow]="score >= 1" (click)="setRating(1)"></span>
+          <span class="fa fa-star" [class.yellow]="score >= 2" (click)="setRating(2)"></span>
+          <span class="fa fa-star" [class.yellow]="score >= 3" (click)="setRating(3)"></span>
+          <span class="fa fa-star" [class.yellow]="score >= 4" (click)="setRating(4)"></span>
+          <span class="fa fa-star" [class.yellow]="score >= 5" (click)="setRating(5)"></span>
+        </div>
+      </div>
+      <button class="btn btn-outline-dark" type="button" (click)="onRegenerate()">Regenerate this summary</button>
+    </div>
+  </div>
+</div>

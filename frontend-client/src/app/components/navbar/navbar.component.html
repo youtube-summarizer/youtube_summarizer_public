@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top py-3">
+  <div class="container">
+    <a class="navbar-brand" href="#">YouTube Summarizer</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/home">Home</a>
+        </li>
+        <li *ngIf="isLoggedIn()" class="nav-item">
+          <a class="nav-link" href="/subscription">Subscription</a>
+        </li>
+        <li *ngIf="!isLoggedIn()" class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li *ngIf="isLoggedIn()" class="nav-item">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+
+      <form class="form-inline mx-auto">
+        <div class="input-group">
+          <input
+            id="searchInput"
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Add video"
+            aria-label="Search"
+          />
+          <div class="input-group-append" style="margin-left: 3px">
+            <button class="btn btn-outline-light" type="button" (click)="onAddVideo()">Add Video</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
