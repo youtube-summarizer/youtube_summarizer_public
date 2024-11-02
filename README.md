@@ -131,10 +131,10 @@ Ensure you have the following installed:
     - A relational database (e.g., PostgreSQL) stores video summaries.
 
 ### Database Schema:
-![Database Schema](https://github.com/youtube-summarizer/youtube-summarizer/blob/main/assets/database.png)
+![Database Schema](https://github.com/youtube-summarizer/youtube-summarizer_public/blob/main/assets/database.png)
 
 ### Workflow: 
-![Workflow](https://github.com/youtube-summarizer/youtube-summarizer/blob/main/assets/workflow.png)
+![Workflow](https://github.com/youtube-summarizer/youtube-summarizer_public/blob/main/assets/workflow.png)
 
 ### Links:
 [Youtube Presentation](https://www.youtube.com/watch?v=F0XFRyNxHZk)
